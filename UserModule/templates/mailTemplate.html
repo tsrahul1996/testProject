@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+        @media screen {
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+            }
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* RESET STYLES */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* MOBILE STYLES */
+        @media screen and (max-width:600px) {
+            h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+            }
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We're thrilled to have you here! Get ready to dive into your new account. </div>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <!-- LOGO -->
+        <tr>
+            <td bgcolor="#FFA73B" align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                            <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome! <p th:text="${'Hello Dear ' + name}"></p></h1> <img src="data:image/png;base64,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" width="125" height="120" style="display: block; border: 0px;" />
+                        </td>   
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;">We're excited to have you get started. First, you need to confirm your account. Just press the button below.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" align="left">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a th:href="@{${url}}" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr> <!-- COPY -->
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;">If that doesn't work, copy and paste the following link in your browser:</p>
+                        </td>
+                    </tr> <!-- COPY -->
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">https://bit.li.utlddssdstueincx</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;">If you have any questions, just reply to this email—we're always happy to help out.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;">Cheers,<br>BBB Team</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2>
+                            <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">We&rsquo;re here to help you out</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br>
+                            <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
